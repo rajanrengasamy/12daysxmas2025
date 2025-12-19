@@ -7,7 +7,7 @@
       "poem": "Through all the years and changing days,\nA friend stands true in countless ways.\nIn laughter shared and tears wiped dry,\nA bond that time cannot deny.",
       "caption": "A cherished moment",
       "sceneId": "cabin",
-      "audioId": "bells-soft"
+      "audioId": "snowflake"
     },
     {
       "id": 2,
@@ -34,7 +34,7 @@
       "poem": "When winter's chill wraps round the earth,\nWe gather close around the hearth.\nWith twinkling lights and carols sung,\nThe magic of when we were young.",
       "caption": "Holiday celebrations",
       "sceneId": "fireside",
-      "audioId": "bells-soft"
+      "audioId": "snowflake"
     },
     {
       "id": 5,
@@ -61,7 +61,7 @@
       "poem": "The road we walk has twists and turns,\nWith lessons that each traveler learns.\nThrough valleys low and mountains high,\nWe journey on beneath the sky.",
       "caption": "On the road",
       "sceneId": "market",
-      "audioId": "bells-soft"
+      "audioId": "snowflake"
     },
     {
       "id": 8,
@@ -88,7 +88,7 @@
       "poem": "To distant shores and places new,\nAdventure calls to me and you.\nWith courage bold and spirits free,\nWe chase the horizon, wild and free.",
       "caption": "Exploring together",
       "sceneId": "forest",
-      "audioId": "bells-soft"
+      "audioId": "snowflake"
     },
     {
       "id": 11,

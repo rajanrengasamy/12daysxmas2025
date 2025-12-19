@@ -38,7 +38,9 @@
       "Bash(vercel inspect:*)",
       "Bash(vercel project ls:*)",
       "Bash(git -C /Users/rajan/Documents/Projects/12daysxmas25 status public/assets/audio/)",
-      "Bash(git -C /Users/rajan/Documents/Projects/12daysxmas25 ls-files:*)"
+      "Bash(git -C /Users/rajan/Documents/Projects/12daysxmas25 ls-files:*)",
+      "Bash(yt-dlp:*)",
+      "Bash(ls:*)"
     ]
   }
 }

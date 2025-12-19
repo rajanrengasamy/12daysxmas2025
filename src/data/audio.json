@@ -1,6 +1,13 @@
 {
   "tracks": [
     {
+      "id": "snowflake",
+      "name": "Snowflake",
+      "url": "/assets/audio/snowflake.mp3",
+      "duration": 15,
+      "loop": true
+    },
+    {
       "id": "bells-soft",
       "name": "Soft Jingle Bells",
       "url": "/assets/audio/bells-soft.mp3",

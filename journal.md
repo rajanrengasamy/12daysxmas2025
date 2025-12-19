@@ -336,3 +336,58 @@ All code is pushed to GitHub at https://github.com/rajanrengasamy/12daysxmas2025
 **Next step:** Complete Vercel login and deploy
 
 ---
+
+## Session: 2024-12-20 ~08:45 AEST
+
+### Summary
+Added new audio asset `snowflake.mp3` to the project and replaced all instances of `bells-soft` audio triggers with the new `snowflake` track. Doors 1, 4, 7, and 10 now play the snowflake audio instead of bells-soft when opened.
+
+### Work Completed
+- **Added new audio file**: `snowflake.mp3` (1.8 MB) added to `/public/assets/audio/`
+- **Also added**: `bells-soft.mp3` (4.7 MB) - new version of bells audio
+- **Updated audio references** in 3 files:
+  - `src/data/doors.json` - Changed `audioId` from `"bells-soft"` to `"snowflake"` for doors 1, 4, 7, 10
+  - `src/data/audio.json` - Added new `snowflake` track definition
+  - `src/lib/audioManager.ts` - Added `snowflake` to trackConfigs array
+
+### Files Modified
+- `src/data/doors.json` - 4 audioId changes (lines 10, 37, 64, 91)
+- `src/data/audio.json` - Added snowflake track entry
+- `src/lib/audioManager.ts` - Added snowflake to track configs
+- `public/assets/audio/snowflake.mp3` - New file
+- `public/assets/audio/bells-soft.mp3` - New file
+
+### Issues & Resolutions
+| Issue | Resolution | Status |
+|:------|:-----------|:-------|
+| None encountered | Clean swap of audio references | ✅ N/A |
+
+### Key Decisions
+- Kept `bells-soft` track definitions in place (in audio.json and audioManager.ts) for potential future use
+- Only changed the door references from bells-soft to snowflake
+- Doors using snowflake: 1 (Friendship), 4 (Holiday Magic), 7 (Life's Path), 10 (Adventures)
+- Doors still using other tracks: piano-warm (2, 5, 8, 11), chimes (3, 6, 9, 12)
+
+### Learnings
+- Audio system uses a two-layer mapping: doors reference audioId → audio config maps ID to file URL
+- Both audio.json (data) and audioManager.ts (runtime) need to define tracks
+
+### Open Items / Blockers
+- [ ] Test snowflake audio plays correctly on doors 1, 4, 7, 10
+- [ ] Commit audio changes to git
+- [ ] Deploy updated version to Vercel
+
+### Context for Next Session
+New snowflake audio track has been integrated. The audio mapping system is:
+- **snowflake**: Doors 1, 4, 7, 10
+- **piano-warm**: Doors 2, 5, 8, 11
+- **chimes**: Doors 3, 6, 9, 12
+
+`bells-soft` track still exists in config but is no longer referenced by any door.
+
+**Next steps:**
+1. Test audio playback locally
+2. Commit and push changes
+3. Redeploy to Vercel
+
+---

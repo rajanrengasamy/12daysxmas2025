@@ -17,6 +17,7 @@ class AudioManager {
     if (this.isInitialized) return;
 
     const trackConfigs = [
+      { id: "snowflake", url: "/assets/audio/snowflake.mp3" },
       { id: "bells-soft", url: "/assets/audio/bells-soft.mp3" },
       { id: "piano-warm", url: "/assets/audio/piano-warm.mp3" },
       { id: "chimes", url: "/assets/audio/chimes.mp3" },
