@@ -1,0 +1,143 @@
+{
+  "doors": [
+    {
+      "number": 1,
+      "title": "The Gift of Friendship",
+      "imageUrl": "/photos/memory-1.jpg",
+      "backgroundScene": "cabin",
+      "poem": "Through all the years and changing days,\nA friend stands true in countless ways.\nIn laughter shared and tears wiped dry,\nA bond that time cannot deny.",
+      "caption": "A cherished moment, Winter 2024",
+      "audioTrack": "jingle-soft",
+      "isOpened": false,
+      "theme": "friendship"
+    },
+    {
+      "number": 2,
+      "title": "Love's Warm Embrace",
+      "imageUrl": "/photos/memory-2.jpg",
+      "backgroundScene": "forest",
+      "poem": "Love finds us in the quiet hours,\nIn gentle words and simple powers.\nA glance, a touch, a whispered name,\nTwo hearts that beat as one, the same.",
+      "caption": "Together always, Spring 2024",
+      "audioTrack": "bells-gentle",
+      "isOpened": false,
+      "theme": "love"
+    },
+    {
+      "number": 3,
+      "title": "Moments Together",
+      "imageUrl": "/photos/memory-3.jpg",
+      "backgroundScene": "market",
+      "poem": "The hours we spend, just you and I,\nBeneath the ever-changing sky.\nEach moment precious, held so dear,\nThe sweetest times throughout the year.",
+      "caption": "Quality time, Summer 2024",
+      "audioTrack": "winter-wonder",
+      "isOpened": false,
+      "theme": "time together"
+    },
+    {
+      "number": 4,
+      "title": "Holiday Magic",
+      "imageUrl": "/photos/memory-4.jpg",
+      "backgroundScene": "fireside",
+      "poem": "When winter's chill wraps round the earth,\nWe gather close around the hearth.\nWith twinkling lights and carols sung,\nThe magic of when we were young.",
+      "caption": "Holiday celebrations, December 2024",
+      "audioTrack": "jingle-soft",
+      "isOpened": false,
+      "theme": "holidays"
+    },
+    {
+      "number": 5,
+      "title": "A Heart of Gratitude",
+      "imageUrl": "/photos/memory-5.jpg",
+      "backgroundScene": "cabin",
+      "poem": "For every blessing, large and small,\nFor those who catch us when we fall.\nWith thankful heart, I count each one,\nThe gifts of life beneath the sun.",
+      "caption": "Counting blessings, Autumn 2024",
+      "audioTrack": "bells-gentle",
+      "isOpened": false,
+      "theme": "gratitude"
+    },
+    {
+      "number": 6,
+      "title": "Family Bonds",
+      "imageUrl": "/photos/memory-6.jpg",
+      "backgroundScene": "forest",
+      "poem": "The roots run deep, the branches wide,\nIn family's love, we all abide.\nThrough generations, stories told,\nA treasure worth more than gold.",
+      "caption": "Family gathering, Holiday 2024",
+      "audioTrack": "winter-wonder",
+      "isOpened": false,
+      "theme": "family"
+    },
+    {
+      "number": 7,
+      "title": "Life's Winding Path",
+      "imageUrl": "/photos/memory-7.jpg",
+      "backgroundScene": "market",
+      "poem": "The road we walk has twists and turns,\nWith lessons that each traveler learns.\nThrough valleys low and mountains high,\nWe journey on beneath the sky.",
+      "caption": "On the road, Throughout 2024",
+      "audioTrack": "jingle-soft",
+      "isOpened": false,
+      "theme": "life's journey"
+    },
+    {
+      "number": 8,
+      "title": "What Matters Most",
+      "imageUrl": "/photos/memory-8.jpg",
+      "backgroundScene": "fireside",
+      "poem": "In quiet moments, truth appears,\nBeyond the rush of days and years.\nThe meaning found in simple things,\nThe joy that love and presence brings.",
+      "caption": "Reflection, Late 2024",
+      "audioTrack": "bells-gentle",
+      "isOpened": false,
+      "theme": "meaning of life"
+    },
+    {
+      "number": 9,
+      "title": "Joy and Laughter",
+      "imageUrl": "/photos/memory-9.jpg",
+      "backgroundScene": "cabin",
+      "poem": "Let laughter ring through every room,\nDispelling shadows, lifting gloom.\nIn silly jokes and playful jest,\nWe find that joy is life's true test.",
+      "caption": "Laughing together, All year 2024",
+      "audioTrack": "winter-wonder",
+      "isOpened": false,
+      "theme": "laughter"
+    },
+    {
+      "number": 10,
+      "title": "Adventures Shared",
+      "imageUrl": "/photos/memory-10.jpg",
+      "backgroundScene": "forest",
+      "poem": "To distant shores and places new,\nAdventure calls to me and you.\nWith courage bold and spirits free,\nWe chase the horizon, wild and free.",
+      "caption": "Exploring together, Summer 2024",
+      "audioTrack": "jingle-soft",
+      "isOpened": false,
+      "theme": "adventure"
+    },
+    {
+      "number": 11,
+      "title": "Always There",
+      "imageUrl": "/photos/memory-11.jpg",
+      "backgroundScene": "market",
+      "poem": "When storms arise and skies turn grey,\nYou stand beside me, come what may.\nA steady hand, a listening ear,\nYour support dissolves each fear.",
+      "caption": "Through thick and thin, 2024",
+      "audioTrack": "bells-gentle",
+      "isOpened": false,
+      "theme": "support"
+    },
+    {
+      "number": 12,
+      "title": "Hope for Tomorrow",
+      "imageUrl": "/photos/memory-12.jpg",
+      "backgroundScene": "fireside",
+      "poem": "As this chapter gently ends,\nNew beginnings round the bend.\nWith hope alight in heart and soul,\nThe future beckons, bright and whole.",
+      "caption": "Looking forward, December 2024",
+      "audioTrack": "winter-wonder",
+      "isOpened": false,
+      "theme": "hope"
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-19",
+    "totalDoors": 12,
+    "backgroundScenes": ["cabin", "forest", "market", "fireside"],
+    "audioTracks": ["jingle-soft", "bells-gentle", "winter-wonder"]
+  }
+}
