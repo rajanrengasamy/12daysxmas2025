@@ -24,6 +24,8 @@ export function useAudio() {
       if (!state.hasInteracted) {
         dispatch({ type: "SET_INTERACTED" });
       }
+      // Ensure audio is initialized before playing
+      audioManager.init();
       if (!state.isMuted) {
         audioManager.play(trackId);
       }
