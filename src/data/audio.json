@@ -1,0 +1,25 @@
+{
+  "tracks": [
+    {
+      "id": "bells-soft",
+      "name": "Soft Jingle Bells",
+      "url": "/assets/audio/bells-soft.mp3",
+      "duration": 15,
+      "loop": true
+    },
+    {
+      "id": "piano-warm",
+      "name": "Warm Piano Melody",
+      "url": "/assets/audio/piano-warm.mp3",
+      "duration": 20,
+      "loop": true
+    },
+    {
+      "id": "chimes",
+      "name": "Wind Chimes",
+      "url": "/assets/audio/chimes.mp3",
+      "duration": 12,
+      "loop": true
+    }
+  ]
+}

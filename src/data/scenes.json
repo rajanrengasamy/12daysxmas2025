@@ -1,0 +1,32 @@
+{
+  "scenes": [
+    {
+      "id": "cabin",
+      "name": "Cozy Cabin Interior",
+      "backgroundUrl": "/assets/scenes/bg-01-cabin.png",
+      "textColor": "#FFFFFF",
+      "overlayOpacity": 0.4
+    },
+    {
+      "id": "forest",
+      "name": "Snowy Forest",
+      "backgroundUrl": "/assets/scenes/bg-02-forest.png",
+      "textColor": "#FFFFFF",
+      "overlayOpacity": 0.35
+    },
+    {
+      "id": "market",
+      "name": "Christmas Market",
+      "backgroundUrl": "/assets/scenes/bg-03-market.png",
+      "textColor": "#FFFFFF",
+      "overlayOpacity": 0.45
+    },
+    {
+      "id": "fireside",
+      "name": "Fireside Living Room",
+      "backgroundUrl": "/assets/scenes/bg-04-fireplace.png",
+      "textColor": "#FFFFFF",
+      "overlayOpacity": 0.4
+    }
+  ]
+}
