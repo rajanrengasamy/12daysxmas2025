@@ -281,3 +281,58 @@ Landing page has been redesigned with a more striking visual approach. Dev serve
 **Dev server:** Running on http://localhost:3002
 
 ---
+
+## Session: 2024-12-19 ~21:15 AEST
+
+### Summary
+Completed git setup, pushed all code to GitHub, and made data corrections to memory card captions. Initially updated dates from 2024 to 2025, then removed all date references entirely per user request. Vercel deployment initiated but requires user authentication.
+
+### Work Completed
+- **Git repository sync**: Configured GitHub CLI authentication (`gh auth setup-git`)
+- **Initial push**: Committed 67 files (3307 insertions) with complete app implementation
+- **Caption date fix #1**: Updated all 12 door captions from "2024" to "2025"
+- **Caption date fix #2**: Removed all date/season references from captions entirely
+  - "A cherished moment, Winter 2025" → "A cherished moment"
+  - "Together always, Spring 2025" → "Together always"
+  - etc. for all 12 doors
+- **Multiple commits pushed to GitHub**:
+  - `0d3ca80` feat: Complete 12 Days of Christmas memory app
+  - `7163629` fix: Update all memory captions from 2024 to 2025
+  - `d1c7e30` fix: Remove date references from all memory captions
+
+### Files Modified
+- `src/data/doors.json` - All 12 caption fields simplified
+- `doors.json` (root) - Kept in sync for consistency
+
+### Issues & Resolutions
+| Issue | Resolution | Status |
+|:------|:-----------|:-------|
+| SSH push failing (publickey denied) | Switched to HTTPS + `gh auth setup-git` | ✅ Resolved |
+| Captions showing "2024" instead of "2025" | Updated all 12 captions | ✅ Resolved |
+| User wanted no dates at all in captions | Removed all date/season references | ✅ Resolved |
+| Vercel not authenticated | User started `vercel login` process | ⏳ In Progress |
+
+### Key Decisions
+- Used GitHub CLI (gh) for git authentication instead of SSH keys
+- Updated both `src/data/doors.json` (active) and root `doors.json` (backup) for consistency
+- Captions now contain only the descriptive phrase, no temporal references
+
+### Learnings
+- `gh auth setup-git` configures git to use GitHub CLI credentials for HTTPS operations
+- When user has gh CLI authenticated, switching remote to HTTPS and running setup-git enables seamless pushing
+
+### Open Items / Blockers
+- [ ] Complete Vercel authentication (`vercel login`)
+- [ ] Deploy to Vercel
+- [ ] Test deployed site on mobile devices
+- [ ] Audio files still placeholders (404s)
+
+### Context for Next Session
+All code is pushed to GitHub at https://github.com/rajanrengasamy/12daysxmas2025. The app is ready for Vercel deployment - user just needs to complete `vercel login` authentication and then run `vercel` to deploy.
+
+**Git status:** Clean, all changes committed and pushed
+**Latest commit:** `d1c7e30` fix: Remove date references from all memory captions
+**Dev server:** Running on http://localhost:3002
+**Next step:** Complete Vercel login and deploy
+
+---
