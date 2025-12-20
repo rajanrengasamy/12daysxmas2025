@@ -40,7 +40,10 @@
       "Bash(git -C /Users/rajan/Documents/Projects/12daysxmas25 status public/assets/audio/)",
       "Bash(git -C /Users/rajan/Documents/Projects/12daysxmas25 ls-files:*)",
       "Bash(yt-dlp:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill -9)"
     ]
   }
 }
