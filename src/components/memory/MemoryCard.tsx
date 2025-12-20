@@ -8,7 +8,6 @@ import { PhotoFrame } from "./PhotoFrame";
 import { PoemDisplay } from "./PoemDisplay";
 import { useApp } from "@/context/AppContext";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import { useAudio } from "@/hooks/useAudio";
 import doorsData from "@/data/doors.json";
 
 // Custom variants for the paper-unfold effect
@@ -47,7 +46,6 @@ const reducedMotionVariants = {
 export function MemoryCard() {
   const { state, dispatch } = useApp();
   const prefersReducedMotion = useReducedMotion();
-  const { play, stop } = useAudio();
   const variants = prefersReducedMotion ? reducedMotionVariants : modalVariants;
 
   const activeDoor = state.activeDoorId
@@ -55,19 +53,8 @@ export function MemoryCard() {
     : null;
 
   const handleClose = useCallback(() => {
-    stop();
     dispatch({ type: "CLOSE_CARD" });
-  }, [dispatch, stop]);
-
-  // Play audio when card opens
-  useEffect(() => {
-    if (activeDoor && !state.isMuted) {
-      play(activeDoor.audioId);
-    }
-    return () => {
-      stop();
-    };
-  }, [activeDoor, state.isMuted, play, stop]);
+  }, [dispatch]);
 
   // Handle escape key
   useEffect(() => {

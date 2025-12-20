@@ -7,9 +7,11 @@ import { MemoryCard } from "@/components/memory/MemoryCard";
 import { CelebrationModal } from "@/components/celebration/CelebrationModal";
 import { SnowParticles } from "@/components/effects/SnowParticles";
 import { AppProvider, useApp } from "@/context/AppContext";
+import { useAudio } from "@/hooks/useAudio";
 
 function AppContent() {
   const { state } = useApp();
+  useAudio(); // Activates background audio
 
   return (
     <div className="snow-globe-container min-h-[100dvh] min-h-screen flex flex-col relative overflow-hidden">

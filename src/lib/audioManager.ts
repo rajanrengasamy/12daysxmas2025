@@ -2,88 +2,52 @@
 
 import { Howl } from "howler";
 
-interface AudioTrack {
-  id: string;
-  howl: Howl | null;
-}
-
 class AudioManager {
-  private tracks: Map<string, Howl> = new Map();
-  private currentTrackId: string | null = null;
-  private isMuted: boolean = false;
-  private isInitialized: boolean = false;
+  private track: Howl | null = null;
+  private isPlaying: boolean = false;
 
   init() {
-    if (this.isInitialized) return;
-
-    const trackConfigs = [
-      { id: "snowflake", url: "/assets/audio/snowflake.mp3" },
-      { id: "bells-soft", url: "/assets/audio/bells-soft.mp3" },
-      { id: "piano-warm", url: "/assets/audio/piano-warm.mp3" },
-      { id: "chimes", url: "/assets/audio/chimes.mp3" },
-    ];
-
-    trackConfigs.forEach(({ id, url }) => {
-      const howl = new Howl({
-        src: [url],
-        loop: true,
-        volume: 0.7,
-        preload: true,
-        onloaderror: () => {
-          console.warn(`Failed to load audio track: ${id}`);
-        },
-      });
-      this.tracks.set(id, howl);
+    if (this.track) return;
+    this.track = new Howl({
+      src: ["/assets/audio/bells-soft.mp3"],
+      loop: true,
+      volume: 0.7,
+      html5: true,
+      preload: true,
+      onloaderror: () => {
+        console.warn("Failed to load background audio");
+      },
     });
-
-    this.isInitialized = true;
   }
 
-  play(trackId: string) {
-    if (this.isMuted) return;
-
-    // Stop current track if different
-    if (this.currentTrackId && this.currentTrackId !== trackId) {
-      this.fadeOut(this.currentTrackId);
+  play() {
+    if (!this.track) this.init();
+    if (!this.isPlaying && this.track) {
+      this.track.play();
+      this.isPlaying = true;
     }
-
-    const track = this.tracks.get(trackId);
-    if (!track) return;
-
-    track.volume(0);
-    track.play();
-    track.fade(0, 0.7, 500);
-    this.currentTrackId = trackId;
   }
 
-  fadeOut(trackId: string) {
-    const track = this.tracks.get(trackId);
-    if (!track) return;
-
-    track.fade(0.7, 0, 500);
-    setTimeout(() => track.stop(), 500);
+  pause() {
+    if (this.track) {
+      this.track.pause();
+    }
+    this.isPlaying = false;
   }
 
-  stop() {
-    if (this.currentTrackId) {
-      this.fadeOut(this.currentTrackId);
-      this.currentTrackId = null;
+  resume() {
+    if (this.track) {
+      this.track.play();
+      this.isPlaying = true;
     }
   }
 
   setMuted(muted: boolean) {
-    this.isMuted = muted;
-    if (muted && this.currentTrackId) {
-      this.stop();
+    if (muted) {
+      this.pause();
+    } else if (this.track) {
+      this.resume();
     }
-  }
-
-  cleanup() {
-    this.tracks.forEach((track) => {
-      track.unload();
-    });
-    this.tracks.clear();
-    this.isInitialized = false;
   }
 }
 

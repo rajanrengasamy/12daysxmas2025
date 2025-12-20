@@ -14,11 +14,12 @@ interface DoorProps {
 export function Door({ door, isOpened, onOpen }: DoorProps) {
   const prefersReducedMotion = useReducedMotion();
 
-  const handleClick = async () => {
-    if (!prefersReducedMotion) {
-      await new Promise((resolve) => setTimeout(resolve, 100));
+  const handleClick = () => {
+    if (prefersReducedMotion) {
+      onOpen();
+    } else {
+      setTimeout(onOpen, 100);
     }
-    onOpen();
   };
 
   // Alternate door colors for visual variety
